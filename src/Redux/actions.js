@@ -1,26 +1,41 @@
-import { ADD_TASK, DELETE_TASK } from "./reducer";
+export const ADD_TASK = "ADD_TASK";
+export const TOGGLE_TODO = "TOGGLE_TODO";
+export const DELETE_TASK = "DELETE_TASK";
+export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
 
-const addTask = (task) => {
-    //console.log(task);
+export const visibilityFilters = {
+    SHOW_ALL: "SHOW_ALL",
+    SHOW_COMPLETED: "SHOW_COMPLETED",
+    SHOW_ACTIVE: "SHOW_ACTIVE"
+}
+
+const addTodo = (task) => {
     return {
         type: ADD_TASK,
-        payload: task
+        task
     }
 }
 
-const deleteTask = (id) => {
-    console.log(id);
+const toggleTodo = (id) => {
+    return {
+        type: TOGGLE_TODO,
+        id
+    }
+}
+
+const deleteTodo = (id) => {
     return {
         type: DELETE_TASK,
-        payload: id
+        id
     }
 }
 
-const completeTask = (isCompleted) => {
+const setVisibilityFilter = (filter) => {
+    //console.log(filter);
     return {
-        type: "COMPLETED",
-        payload: isCompleted
+        type: SET_VISIBILITY_FILTER,
+        filter
     }
 }
 
-export { addTask, deleteTask, completeTask }
+export { addTodo, toggleTodo, deleteTodo, setVisibilityFilter }

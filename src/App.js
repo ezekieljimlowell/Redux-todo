@@ -1,10 +1,14 @@
 import './App.css';
-import Todo from './Todo/Todo';
+import { Footer } from './Components/Footer';
+import AddTodo from './Containers/AddTodo';
+import VisibleTodoList from './Containers/VisibleTodoList';
 
 function App() {
   return (
     <div>
-      <Todo />
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
     </div>
   );
 }

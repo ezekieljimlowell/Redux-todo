@@ -1,0 +1,17 @@
+    #taskLabel, #taskInput, #addButton {
+
+    }
+
+#addSection {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#taskLabel {
+    margin-left: 15px
+}
+
+#taskInput, #addButton {
+    margin: 15px
+}

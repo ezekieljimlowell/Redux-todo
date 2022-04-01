@@ -24,6 +24,7 @@ const toggleTodo = (id) => {
 }
 
 const deleteTodo = (id) => {
+    //console.log(id);
     return {
         type: DELETE_TASK,
         id

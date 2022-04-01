@@ -3,7 +3,7 @@ import { setVisibilityFilter } from "../Redux/actions";
 import { Link } from "../Components/Link";
 
 const mapStateToProps = (state, ownProps) => {
-    //console.log(state, ownProps)
+    console.log(state, ownProps)
     return {
         active: ownProps.filter === state.visibleFilter
     }

@@ -1,5 +1,4 @@
-import { combineReducers } from "redux";
-import { reducer as formReducer } from "redux-form";
+
 import {
     ADD_TASK,
     DELETE_TASK,
@@ -23,7 +22,7 @@ const todos = (state = [], action) => {
     //console.log(state, action)
     switch(action.type) {
         case ADD_TASK:
-            console.log(state, action);
+            //console.log(state, action);
             return [
                 ...state,
                 {
@@ -33,7 +32,7 @@ const todos = (state = [], action) => {
                 }
             ]
         case DELETE_TASK: 
-            return state.filter(data => data.id === action.id);
+            return state.filter(data => data.id !== action.id);
         case TOGGLE_TODO: 
             return state.map((data, index) => {
                 if(action.id === index) {

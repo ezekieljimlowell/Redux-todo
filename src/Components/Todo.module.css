@@ -1,0 +1,8 @@
+.taskText {
+    color: rgb(109, 16, 34);
+    margin: 5px 5px 2px 10px;
+}
+
+.completeButton, .deleteButton {
+    margin: 10px
+}

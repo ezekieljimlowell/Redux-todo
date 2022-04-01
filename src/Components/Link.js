@@ -1,20 +1,21 @@
 import React from "react";
+import styles from './Link.module.css';
 
 export const Link = ({ active, children, onClick }) => {
-    if (active) {
+    /*if (active) {
         return <span>{children}</span>
-    }
+    }*/
 
     //console.log(active, children, onClick())
 
     return (
-        <>
-            <a href="" onClick={(e) => {
+        <span>
+            <button type="button" className={styles.taskStatusButton} onClick={(e) => {
                 e.preventDefault();
                 onClick()
             }}>
                 {children}
-            </a>
-        </>
+            </button>
+        </span>
     )
 }
